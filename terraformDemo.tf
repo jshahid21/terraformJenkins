@@ -245,7 +245,7 @@ resource "oci_core_subnet" "db2Subnet" {
 resource "oci_core_instance" "dbSystem1" {
   availability_domain = "LPEH:US-ASHBURN-AD-1"
   compartment_id      = "${var.compartment_ocid}"
-  shape               = "VM.Standard2.4"
+  shape               = "VM.Standard.E2.1"
 
   metadata {
     ssh_authorized_keys = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZgJClETAdRFuH4y/uRAgMLuLnn/QL07oZDBEEc9oxCdKCD9nH3GbKykQ+9RP9h29etzOfyDkRF6oB9Dh2ukzhEFcyBIkPVC1Lze1tVjtoXXms3fGpzrYPkq8UxDAwt+k66xuhptR9PSklJspyBEHYAClJN56t4zoRr/ZhJnafZmPQ41QfSWss8JGNiHlqRmlvRLgC/LwRY/q4E1ZE/VfR1RK5eDa6DZOu6UrjTf9fi3BIvoPcLgV7jPW/nFcOiGYSgJ/yq4Dpy8pcfs06DHqR43O4TlWXQ5Ysxr0K1VzbZwwX+Y0o64qQJDthZWbVAoV02oBHKbWzDVI8965HJMyr joboyle@Jamess-MacBook-Pro-2.local"
@@ -267,7 +267,7 @@ resource "oci_core_instance" "dbSystem1" {
 resource "oci_core_instance" "dbSystem2" {
   availability_domain = "LPEH:US-ASHBURN-AD-2"
   compartment_id      = "${var.compartment_ocid}"
-  shape               = "VM.Standard2.4"
+  shape               = "VM.Standard.E2.1"
 
   metadata {
     ssh_authorized_keys = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZgJClETAdRFuH4y/uRAgMLuLnn/QL07oZDBEEc9oxCdKCD9nH3GbKykQ+9RP9h29etzOfyDkRF6oB9Dh2ukzhEFcyBIkPVC1Lze1tVjtoXXms3fGpzrYPkq8UxDAwt+k66xuhptR9PSklJspyBEHYAClJN56t4zoRr/ZhJnafZmPQ41QfSWss8JGNiHlqRmlvRLgC/LwRY/q4E1ZE/VfR1RK5eDa6DZOu6UrjTf9fi3BIvoPcLgV7jPW/nFcOiGYSgJ/yq4Dpy8pcfs06DHqR43O4TlWXQ5Ysxr0K1VzbZwwX+Y0o64qQJDthZWbVAoV02oBHKbWzDVI8965HJMyr joboyle@Jamess-MacBook-Pro-2.local"
@@ -297,7 +297,7 @@ resource "oci_core_instance" "bastionInstance" {
     source_type = "image"
   }
 
-  shape = "VM.Standard2.4"
+  shape = "VM.Standard1.2"
 
   metadata {
     ssh_authorized_keys = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZgJClETAdRFuH4y/uRAgMLuLnn/QL07oZDBEEc9oxCdKCD9nH3GbKykQ+9RP9h29etzOfyDkRF6oB9Dh2ukzhEFcyBIkPVC1Lze1tVjtoXXms3fGpzrYPkq8UxDAwt+k66xuhptR9PSklJspyBEHYAClJN56t4zoRr/ZhJnafZmPQ41QfSWss8JGNiHlqRmlvRLgC/LwRY/q4E1ZE/VfR1RK5eDa6DZOu6UrjTf9fi3BIvoPcLgV7jPW/nFcOiGYSgJ/yq4Dpy8pcfs06DHqR43O4TlWXQ5Ysxr0K1VzbZwwX+Y0o64qQJDthZWbVAoV02oBHKbWzDVI8965HJMyr joboyle@Jamess-MacBook-Pro-2.local"
