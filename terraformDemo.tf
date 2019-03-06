@@ -196,7 +196,7 @@ resource "oci_core_security_list" "PrivateDB2SecurityList" {
 //create 3 subnets
 
 resource "oci_core_subnet" "BastionSubnet" {
-  availability_domain        = "ToGS:US-ASHBURN-AD-1"
+  availability_domain        = "LPEH:US-ASHBURN-AD-1"
   cidr_block                 = "10.0.0.0/24"
   compartment_id             = "${var.compartment_ocid}"
   display_name               = "BastionSubnet"
@@ -211,7 +211,7 @@ resource "oci_core_subnet" "BastionSubnet" {
 }
 
 resource "oci_core_subnet" "db1Subnet" {
-  availability_domain        = "ToGS:US-ASHBURN-AD-1"
+  availability_domain        = "LPEH:US-ASHBURN-AD-1"
   cidr_block                 = "10.0.1.0/24"
   compartment_id             = "${var.compartment_ocid}"
   display_name               = "db1Subnet"
@@ -226,7 +226,7 @@ resource "oci_core_subnet" "db1Subnet" {
 }
 
 resource "oci_core_subnet" "db2Subnet" {
-  availability_domain        = "ToGS:US-ASHBURN-AD-2"
+  availability_domain        = "LPEH:US-ASHBURN-AD-2"
   cidr_block                 = "10.0.2.0/24"
   compartment_id             = "${var.compartment_ocid}"
   display_name               = "db2Subnet"
@@ -289,7 +289,7 @@ resource "oci_core_instance" "dbSystem2" {
 //provision bastion instance
 
 resource "oci_core_instance" "bastionInstance" {
-  availability_domain = "LPEH:US-ASHBURN-AD-3"
+  availability_domain = "LPEH:US-ASHBURN-AD-1"
   compartment_id      = "${var.compartment_ocid}"
 
   source_details {
