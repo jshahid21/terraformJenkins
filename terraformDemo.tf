@@ -243,7 +243,7 @@ resource "oci_core_subnet" "db2Subnet" {
 //provision two VMs for the databases
 
 resource "oci_core_instance" "dbSystem1" {
-  availability_domain = "ToGS:US-ASHBURN-AD-1"
+  availability_domain = "LPEH:US-ASHBURN-AD-1"
   compartment_id      = "${var.compartment_ocid}"
   shape               = "VM.Standard2.4"
 
@@ -265,7 +265,7 @@ resource "oci_core_instance" "dbSystem1" {
 }
 
 resource "oci_core_instance" "dbSystem2" {
-  availability_domain = "ToGS:US-ASHBURN-AD-2"
+  availability_domain = "LPEH:US-ASHBURN-AD-2"
   compartment_id      = "${var.compartment_ocid}"
   shape               = "VM.Standard2.4"
 
@@ -289,7 +289,7 @@ resource "oci_core_instance" "dbSystem2" {
 //provision bastion instance
 
 resource "oci_core_instance" "bastionInstance" {
-  availability_domain = "ToGS:US-ASHBURN-AD-1"
+  availability_domain = "LPEH:US-ASHBURN-AD-3"
   compartment_id      = "${var.compartment_ocid}"
 
   source_details {
