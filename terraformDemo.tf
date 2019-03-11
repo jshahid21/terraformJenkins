@@ -14,12 +14,12 @@ provider "oci" {
 #   private_key_path = "${var.private_key_path}"
 }
 
-resource "oci_core_virtual_network" "VCN" {
-  cidr_block     = "10.0.0.0/16"
-  dns_label      = "VCN"
-  compartment_id = "${var.compartment_ocid}"
-  display_name   = "VCN"
-}
+# resource "oci_core_virtual_network" "VCN" {
+#   cidr_block     = "10.0.0.0/16"
+#   dns_label      = "VCN"
+#   compartment_id = "${var.compartment_ocid}"
+#   display_name   = "VCN"
+# }
 
 # //Creating Internet and NAT gateways
 # resource "oci_core_internet_gateway" "IGW" {
